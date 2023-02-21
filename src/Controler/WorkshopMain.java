@@ -1,54 +1,38 @@
 package Controler;
 
-import Model.ArrayImp;
+import Service.PrimeNo;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.LinkedList;
 
 public class WorkshopMain {
-    private static List<Integer> list = new ArrayList<>();
-    private static List<Integer> list1 = new ArrayList<>();
-    private static List<Integer> list2 = new ArrayList<>();
-    private static List<Integer> primeNoList = new ArrayList<>();
-    public static void main(String[] args) {
+    private static LinkedList<Integer> list = new LinkedList<>();
+    private static LinkedList<Integer> list1 = new LinkedList<>();
+    private static LinkedList<Integer> list2 = new LinkedList<>();
+    private static LinkedList<Integer> primeNoList = new LinkedList<>();
+    public static void main(String[] args)
+    {
+        PrimeNo primeNo = new PrimeNo();
 
-        int counter1=0,counter2 = 0,counter3=0;
+        primeNo.DivisibleBythree(list);
+        primeNo.DivisibleByFive(list1);
+        primeNo.DivisibleSeven(list2);
+        System.out.println("Divide by 3");
+        primeNo.Display(list);
 
-        ArrayImp.DivisibleBythree(list);
-        ArrayImp.DivisibleByfive(list1);
-        ArrayImp.DivisibleByfive(list2);
-        ArrayImp.DisplayList(list);
-        ArrayImp.DisplayList1(list1);
-        ArrayImp.DisplayList2(list2);
-        ArrayImp.DisplayPrime(primeNoList);
-//        for(int j= 0;j<=500;j++)
-//        {
-//            if(j%5==0)
-//            {
-//                list2.add(j);
-//            }
-//        }
-//        for(int k = 0; k<=500;k++)
-//        {
-//            if(k%7==0)
-//            {
-//                list2.add(k);
-//            }
-//        }
-//
-//         System.out.println("Number divide by 5 is ");
-//        for(int a = 1; a<list1.size();a++)
-//        {
-//            System.out.println(list1.get(a));
-//
-//        } System.out.println("Number divide by 7 is ");
-//        for(int a = 1; a<list2.size();a++)
-//        {
-//            System.out.println(list2.get(a));
-//
-//        }
+        System.out.println("Divide by 5");
+        primeNo.Display(list1);
+
+        System.out.println("Divide by 7");
+        primeNo.Display(list2);
+        primeNo.primeNo(primeNoList);
 
 
+//        ArrayImp.DivisibleByfive(list1);
+//        ArrayImp.DivisibleByfive(list2);
+//        ArrayImp.DisplayList(list);
+//        ArrayImp.DisplayList1(list1);
+//        ArrayImp.DisplayList2(list2);
+//        ArrayImp.DisplayPrime(primeNoList);
 
     }
 }

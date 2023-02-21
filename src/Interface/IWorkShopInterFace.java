@@ -1,6 +1,13 @@
 package Interface;
 
-public interface IWorkShopInterFace {
+import java.util.LinkedList;
 
-    public void Accept(int arr[]);
+public interface IWorkShopInterFace
+{
+  public void DivisibleBythree(LinkedList list);
+    public void DivisibleByFive(LinkedList list1);
+    public void DivisibleSeven(LinkedList list2);
+
+
+
 }
